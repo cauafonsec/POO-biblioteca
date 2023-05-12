@@ -1,5 +1,3 @@
-
-
 public class Aluno extends Pessoa {
 
 //	Caua da Fonseca RA:2417685
