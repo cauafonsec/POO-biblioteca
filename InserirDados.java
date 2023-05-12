@@ -1,4 +1,3 @@
-package Biblioteoca.domain;
 
 import java.util.Scanner;
 
