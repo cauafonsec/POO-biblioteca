@@ -1,4 +1,3 @@
-package Biblioteoca.domain;
 
 public class Professor extends Pessoa {
 
