@@ -1,4 +1,4 @@
-package Biblioteoca.domain;
+
 
 public class Editora {
 
