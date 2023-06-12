@@ -1,6 +1,6 @@
-public class Emprestimo {
+//Caua Da Fonseca  RA:2417685
 
-//	Caua da Fonseca RA:2417685
+public class Emprestimo {
 
 	private int id;
 	private Pessoa pessoa;

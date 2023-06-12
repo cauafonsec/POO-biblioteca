@@ -1,6 +1,6 @@
-public class Aluno extends Pessoa {
+//Caua Da Fonseca  RA:2417685
 
-//	Caua da Fonseca RA:2417685
+public class Aluno extends Pessoa {
 
 	private int ra;
 	private int anomatricula;

@@ -1,8 +1,6 @@
-
+//Caua Da Fonseca  RA:2417685
 
 public class Funcionario extends Pessoa {
-
-//	Caua da Fonseca RA:2417685
 
 	private int registro;
 	private String cargo;
