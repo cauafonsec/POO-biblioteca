@@ -2,7 +2,6 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
-import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -24,7 +23,6 @@ public class AlugarLivros extends JFrame {
 	}
 
 	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 
 		jScrollPane1 = new javax.swing.JScrollPane();
@@ -39,7 +37,6 @@ public class AlugarLivros extends JFrame {
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		addWindowListener(new java.awt.event.WindowAdapter() {
 			public void windowActivated(java.awt.event.WindowEvent evt) {
-				formWindowActivated(evt);
 			}
 		});
 
@@ -75,13 +72,11 @@ public class AlugarLivros extends JFrame {
 
 		cxCpf.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				cxCpfActionPerformed(evt);
 			}
 		});
 
 		cxiD.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				cxiDActionPerformed(evt);
 			}
 		});
 
@@ -144,7 +139,13 @@ public class AlugarLivros extends JFrame {
 		try {
 			Emprestimo e = new Emprestimo();
 			Pessoa p = Banco.getBanco().buscarPessoa(cxCpf.getText());
+			if (p == null) {
+				lancarErro("Esta Pessoa nao existe ou cpf errado!");
+			}
 			Livro l = Banco.getBanco().buscarLivro(Integer.parseInt(cxiD.getText()));
+			if (l == null) {
+				lancarErro("Este Livro nao existe ou ja foi alugado!");
+			}
 			e.setLivro(l);
 			e.setPessoa(p);
 
@@ -156,16 +157,6 @@ public class AlugarLivros extends JFrame {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Algo deu errado", "Erro", 1);
 		}
-
-	}
-
-	protected void cxCpfActionPerformed(ActionEvent evt) {
-		// TODO Auto-generated method stub
-
-	}
-
-	protected void cxiDActionPerformed(ActionEvent evt) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -186,9 +177,14 @@ public class AlugarLivros extends JFrame {
 
 	}
 
-	protected void formWindowActivated(WindowEvent evt) {
-		// TODO Auto-generated method stub
+	private void lancarErro(String string) {
+		try {
+			Integer i = 0;
+			Integer res = 10 / i;
+		} catch (Exception e) {
+			throw new MsgErro(string);
 
+		}
 	}
 
 	private javax.swing.JButton Alugar;
