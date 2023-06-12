@@ -1,8 +1,6 @@
-
+//Caua Da Fonseca  RA:2417685
 
 public class Editora {
-
-//	Caua da Fonseca RA:2417685
 
 	private int id;
 	private String nome;
