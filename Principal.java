@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 public class Principal extends JFrame {
 
@@ -27,14 +28,13 @@ public class Principal extends JFrame {
 		JMenuBar bmPrincipal = new JMenuBar();
 		JMenu mnPrincipal = new JMenu();
 		JMenuItem mnItCadPes = new JMenuItem();
-		JMenuItem mnItRelGerPes = new JMenuItem();
-		JMenu jMenu2 = new JMenu();
-		JMenuItem jMenuItem1 = new JMenuItem();
+		JMenuItem mnItAlugLivro = new JMenuItem();
 		JMenu jMenu1 = new JMenu();
+		JMenuItem jInfo = new JMenuItem();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-		rotPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+		rotPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 48));
 		rotPrincipal.setText("Biblioteca");
 
 		mnPrincipal.setText("Menu");
@@ -47,20 +47,29 @@ public class Principal extends JFrame {
 		});
 		mnPrincipal.add(mnItCadPes);
 
-		mnItRelGerPes.setText("Alugar Livros");
-		mnItRelGerPes.addActionListener(new ActionListener() {
+		mnItAlugLivro.setText("Alugar Livros");
+		mnItAlugLivro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				Banco.getBanco().criarLivro();
 				AlugarLivros.getAlugaLivros().setVisible(true);
 
 			}
 		});
-		mnPrincipal.add(mnItRelGerPes);
+		mnPrincipal.add(mnItAlugLivro);
 
 		bmPrincipal.add(mnPrincipal);
 
 		jMenu1.setText("Sobre");
+
+		jInfo.setText("Info");
+		jInfo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				SobreInfo(evt);
+			}
+		});
 		bmPrincipal.add(jMenu1);
+
+		jMenu1.add(jInfo);
 
 		setJMenuBar(bmPrincipal);
 
@@ -74,6 +83,12 @@ public class Principal extends JFrame {
 						.addGap(139, 139, 139).addComponent(rotPrincipal).addContainerGap(122, Short.MAX_VALUE)));
 
 		pack();
+	}
+
+	protected void SobreInfo(ActionEvent evt) {
+		JOptionPane.showMessageDialog(null, "Projeto de aluguel de livros. \nAluno: Cauã da Fonseca\nRA:2417685",
+				"Sobre", 1);
+
 	}
 
 	private void cadastroPessoa(ActionEvent evt) {

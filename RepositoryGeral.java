@@ -1,8 +1,15 @@
 //Caua Da Fonseca  RA:2417685
 
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import javax.swing.GroupLayout;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableModel;
 
 public class RepositoryGeral extends JFrame {
@@ -24,38 +31,36 @@ public class RepositoryGeral extends JFrame {
 	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 
-		jScrollPane1 = new javax.swing.JScrollPane();
-		tabPes2 = new javax.swing.JTable();
+		jScrollPane1 = new JScrollPane();
+		tabPes2 = new JTable();
 
-		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-		addWindowListener(new java.awt.event.WindowAdapter() {
-			public void windowActivated(java.awt.event.WindowEvent evt) {
+		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+		addWindowListener(new WindowAdapter() {
+			public void windowActivated(WindowEvent evt) {
 				formWindowActivated(evt);
 			}
 		});
 
 		tabPes2.setModel(
-				new javax.swing.table.DefaultTableModel(
+				new DefaultTableModel(
 						new Object[][] { { null, null, null, null }, { null, null, null, null },
 								{ null, null, null, null }, { null, null, null, null } },
 						new String[] { "ID", "CPF", "NOME", "IDADE" }));
-		tabPes2.addMouseListener(new java.awt.event.MouseAdapter() {
-			public void mouseClicked(java.awt.event.MouseEvent evt) {
+		tabPes2.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent evt) {
 			}
 		});
 		jScrollPane1.setViewportView(tabPes2);
 
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+		GroupLayout layout = new GroupLayout(getContentPane());
 		getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(layout
-						.createSequentialGroup().addGap(41, 41, 41).addComponent(jScrollPane1,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+		layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup().addGap(41, 41, 41)
+						.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 307, GroupLayout.PREFERRED_SIZE)
 						.addContainerGap(52, Short.MAX_VALUE)));
-		layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(layout
-						.createSequentialGroup().addGap(51, 51, 51).addComponent(jScrollPane1,
-								javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+		layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup().addGap(51, 51, 51)
+						.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 173, GroupLayout.PREFERRED_SIZE)
 						.addContainerGap(76, Short.MAX_VALUE)));
 
 		pack();
@@ -80,6 +85,6 @@ public class RepositoryGeral extends JFrame {
 
 	}
 
-	private javax.swing.JScrollPane jScrollPane1;
-	private javax.swing.JTable tabPes2;
+	private JScrollPane jScrollPane1;
+	private JTable tabPes2;
 }

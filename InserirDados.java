@@ -1,12 +1,16 @@
 //Caua Da Fonseca  RA:2417685
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.LayoutStyle;
+import javax.swing.WindowConstants;
 
 public class InserirDados extends JFrame {
 
@@ -26,103 +30,96 @@ public class InserirDados extends JFrame {
 	}
 
 	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed" desc="Generated Code">
 	private void initComponents() {
 
-		rotCpf = new javax.swing.JLabel();
-		rotNome = new javax.swing.JLabel();
-		cxCpf = new javax.swing.JTextField();
-		cxNome = new javax.swing.JTextField();
-		btSair = new javax.swing.JButton();
-		btInsPes = new javax.swing.JButton();
-		btClientes = new javax.swing.JButton();
-		rotIdade = new javax.swing.JLabel();
-		cxIdade = new javax.swing.JTextField();
+		rotCpf = new JLabel();
+		rotNome = new JLabel();
+		cxCpf = new JTextField();
+		cxNome = new JTextField();
+		btSair = new JButton();
+		btInsPes = new JButton();
+		btClientes = new JButton();
+		rotIdade = new JLabel();
+		cxIdade = new JTextField();
 
-		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
-		rotCpf.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+		rotCpf.setFont(new java.awt.Font("Segoe UI", 1, 18));
 		rotCpf.setText("CPF: ");
 
-		rotNome.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+		rotNome.setFont(new java.awt.Font("Segoe UI", 1, 18));
 		rotNome.setText("NOME: ");
 
-		cxCpf.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
+		cxCpf.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				cxCpfActionPerformed(evt);
 			}
 		});
 
-		cxNome.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
+		cxNome.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				cxNomeActionPerformed(evt);
 			}
 		});
 
 		btSair.setText("Sair");
-		btSair.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
+		btSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				btSairActionPerformed(evt);
 			}
 		});
 
 		btInsPes.setText("Inserir");
-		btInsPes.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
+		btInsPes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				btInsPesActionPerformed(evt);
 			}
 		});
 
 		btClientes.setText("Clientes");
-		btClientes.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
+		btClientes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				btClientesActionPerformed(evt);
 			}
 		});
 
-		rotIdade.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+		rotIdade.setFont(new java.awt.Font("Segoe UI", 1, 18));
 		rotIdade.setText("Idade:");
 
-		cxIdade.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				cxIdadeActionPerformed(evt);
-			}
-		});
-
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+		GroupLayout layout = new GroupLayout(getContentPane());
 		getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
-				.createSequentialGroup().addGap(20, 20, 20)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING).addComponent(btSair)
-						.addComponent(rotNome).addComponent(rotCpf).addComponent(rotIdade))
-				.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
-						.createSequentialGroup()
-						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-								.addComponent(cxNome, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
-								.addComponent(cxCpf)
-								.addComponent(cxIdade, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
-						.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)).addGroup(
-								layout.createSequentialGroup().addGap(0, 285, Short.MAX_VALUE).addComponent(btClientes)
-										.addGap(18, 18, 18).addComponent(btInsPes).addGap(24, 24, 24)))));
-		layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(layout.createSequentialGroup().addGap(24, 24, 24)
-						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-								.addComponent(rotCpf).addComponent(cxCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 24,
-										javax.swing.GroupLayout.PREFERRED_SIZE))
-						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-								.addComponent(cxNome, javax.swing.GroupLayout.PREFERRED_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(rotNome, javax.swing.GroupLayout.Alignment.TRAILING))
-						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(rotIdade).addComponent(cxIdade, javax.swing.GroupLayout.PREFERRED_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
-						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(btClientes).addComponent(btSair).addComponent(btInsPes))
-						.addContainerGap()));
+		layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup().addGap(20, 20, 20)
+						.addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(btSair)
+								.addComponent(rotNome).addComponent(rotCpf).addComponent(rotIdade))
+						.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+						.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+								.addGroup(layout.createSequentialGroup()
+										.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+												.addComponent(cxNome, GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+												.addComponent(cxCpf)
+												.addComponent(cxIdade, GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))
+										.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+								.addGroup(layout.createSequentialGroup().addGap(0, 285, Short.MAX_VALUE)
+										.addComponent(btClientes).addGap(18, 18, 18).addComponent(btInsPes)
+										.addGap(24, 24, 24)))));
+		layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(layout
+				.createSequentialGroup().addGap(24, 24, 24)
+				.addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING).addComponent(rotCpf)
+						.addComponent(cxCpf, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE))
+				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+				.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+						.addComponent(cxNome, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addComponent(rotNome, GroupLayout.Alignment.TRAILING))
+				.addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+				.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(rotIdade)
+						.addComponent(cxIdade, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE))
+				.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+				.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(btClientes)
+						.addComponent(btSair).addComponent(btInsPes))
+				.addContainerGap()));
 
 		pack();
 	}
@@ -174,11 +171,6 @@ public class InserirDados extends JFrame {
 
 	private void btClientesActionPerformed(ActionEvent evt) {
 		RepositoryGeral.getRepoGeral().setVisible(true);
-
-	}
-
-	private void cxIdadeActionPerformed(ActionEvent evt) {
-		// TODO Auto-generated method stub
 
 	}
 
