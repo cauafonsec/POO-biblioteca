@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 //Caua Da Fonseca  RA:2417685
 
 public class Emprestimo {
 
 	private int id;
 	private Pessoa pessoa;
-	private Livro livro;
+	private List<Livro> livro = new ArrayList<Livro>();
 
 	public Emprestimo() {
 
@@ -26,17 +29,12 @@ public class Emprestimo {
 		this.pessoa = pessoa;
 	}
 
-	public Livro getLivro() {
+	public List<Livro> getLivro() {
 		return livro;
 	}
 
-	public void setLivro(Livro livro) {
+	public void setLivro(List<Livro> livro) {
 		this.livro = livro;
-	}
-
-	@Override
-	public String toString() {
-		return "Emprestimo: \n" + pessoa + livro;
 	}
 
 }

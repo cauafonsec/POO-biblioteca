@@ -9,8 +9,8 @@ public class Banco {
 //			Criando os livros
 
 	static Pessoa p = new Pessoa();
-	static List<Pessoa> bdPes = new ArrayList<>();
-	static List<Livro> l = new ArrayList<>();
+	static List<Pessoa> bdPes = new ArrayList<Pessoa>();
+	static List<Livro> l = new ArrayList<Livro>();
 	private static Banco bancoUnico;
 
 	public static Banco getBanco() {

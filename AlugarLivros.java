@@ -6,10 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.text.SimpleDateFormat;
 import java.time.OffsetDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
@@ -49,7 +46,6 @@ public class AlugarLivros extends JFrame {
 		jLabelCPF = new JLabel();
 		cxCpf = new JTextField();
 		cxiD = new JTextField();
-		botaoAtt = new JButton();
 
 		setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		addWindowListener(new WindowAdapter() {
@@ -136,7 +132,7 @@ public class AlugarLivros extends JFrame {
 
 	protected void JInfoActionPerformed(ActionEvent evt) {
 		JOptionPane.showMessageDialog(null,
-				"Para Alugar um livro digite o cpf do cliente e o id do livro que conta na tabela, de dois cliques na tabela e aparecera os livros",
+				"Para Alugar um livro digite o cpf do cliente e o id do livro que conta na tabela,\n de dois cliques na tabela e aparecera os livros",
 				"info", 1);
 	}
 
@@ -149,13 +145,13 @@ public class AlugarLivros extends JFrame {
 			Emprestimo e = new Emprestimo();
 			Pessoa p = Banco.getBanco().buscarPessoa(cxCpf.getText());
 			if (p == null) {
-				lancarErro("Esta Pessoa nao existe ou cpf errado!");
+				JOptionPane.showMessageDialog(null, "Esta Pessoa nao existe ou cpf errado!", "Erro", 1);
 			}
 			Livro l = Banco.getBanco().buscarLivro(Integer.parseInt(cxiD.getText()));
 			if (l == null) {
-				lancarErro("Este Livro nao existe ou ja foi alugado!");
+				JOptionPane.showMessageDialog(null, "Este Livro nao existe ou ja foi alugado!", "Erro", 1);
 			}
-			e.setLivro(l);
+			e.getLivro().add(l);
 			e.setPessoa(p);
 
 			if (e != null) {
@@ -189,17 +185,6 @@ public class AlugarLivros extends JFrame {
 
 	}
 
-	private void lancarErro(String string) {
-		try {
-			Integer i = 0;
-			Integer res = 10 / i;
-		} catch (Exception e) {
-			throw new MsgErro(string);
-
-		}
-	}
-
-	private JButton botaoAtt;
 	private JButton Alugar;
 	private JButton JInfo;
 	private JLabel jLabelCPF;
